@@ -2,13 +2,17 @@
 
 using namespace std;
 
-int fib(int x) {
-    if (x == 1) return 0;
-    if (x == 2) return 1;
-    return fib(x - 1) + fib(x - 2);
+void fib(int x) {
+    int a = 0, b = 1, t;
+    for (int i = 0; i < x; ++i) {
+        cout << a << endl;
+        t = b;
+        b += a;
+        a = t;
+    }
 }
 
 int main() {
-    cout << fib(10);
+    fib(10);
     return 0;
 }
